@@ -50,9 +50,14 @@ int main()
 
     int low = 0;
     int high = n-1;
-    int mid = low + (high - low) / 2;
- 
-    merge_sort(arr,4, arr +4 , 5);
+    // mid is ending of 1st sorted array
+    // mid need not be in the middle
+    // low need not to be in 0; so that's why arr+low
+    // high need not to be in n-1 
+    int mid = 3;
+
+
+    merge_sort(arr+low,mid+1, arr +mid+1 , n-mid-1);
 
     return 0;
 }
