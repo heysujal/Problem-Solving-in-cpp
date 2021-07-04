@@ -1,5 +1,5 @@
 // this solution is not passing testcase
-
+// find the two repeating element in array
 
 #include <bits/stdc++.h>
 using namespace std;

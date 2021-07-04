@@ -5,8 +5,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-
-void find_pair(int* arr, int size,int k){
+void find_pair(int *arr, int size, int k)
+{
 
     int i = 0;
     int j = size - 1;
@@ -17,56 +17,46 @@ void find_pair(int* arr, int size,int k){
 
     // now use 2 pointers
 
-    for (  ; i<j; )
+    for (; i < j;)
     {
-        
-        if(arr[i]+arr[j]==k){
-            cout<<arr[i]<<" "<<arr[j]<<endl;
+
+        if (arr[i] + arr[j] == k)
+        {
+            cout << arr[i] << " " << arr[j] << endl;
             flag = 1;
             i++;
             j--;
-
         }
 
-        else if(arr[i]+arr[j]>k){
+        else if (arr[i] + arr[j] > k)
+        {
             j--;
-
         }
 
-        else if(arr[i]+arr[j]<k){
+        else if (arr[i] + arr[j] < k)
+        {
             i++;
         }
-
-
     }
-    
-    if(!flag)
+
+    if (!flag)
         cout << "No pair found with sum k";
 }
-
 
 int main()
 {
 
     int n;
     cin >> n;
-    
 
-    // int arr[n];
-    // for (int i = 0; i < n; i++)
-    // {
-    //     cin >> arr[i];
-    // }
     int arr[] = {1, -2, 1, 0, 5};
 
-    // cout<<"ENTER K";
-    // cin>>k;
-    int k;
+     int k;
 
-   cout<<"Enter k ";
-   cin>>k;
+    cout << "Enter k ";
+    cin >> k;
 
-    find_pair(arr, n,k);
+    find_pair(arr, n, k);
 
     return 0;
 }
