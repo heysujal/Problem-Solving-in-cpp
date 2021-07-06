@@ -1,5 +1,5 @@
 // apna college practice Question in notes
-// longestSubarray
+// longest arihtmetic Subarray
 #include<bits/stdc++.h>
 using namespace std;
 int main()

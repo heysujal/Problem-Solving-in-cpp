@@ -1,4 +1,6 @@
-// correction solution but gives TLE
+// correct solution but gives TLE
+// O(n2) solution
+
 #include <bits/stdc++.h>
 using namespace std;
 

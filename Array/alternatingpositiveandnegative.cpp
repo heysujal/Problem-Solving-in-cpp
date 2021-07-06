@@ -1,3 +1,7 @@
+// O(n3) soln
+
+// Rearrange array in alternating positive & negative items with O(1) extra space
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -10,7 +14,7 @@ void print_array(int arr[], int n)
     cout << endl;
 }
 
-void right_shift(int *arr, int start, int end)
+void right_rotate(int *arr, int start, int end)
 {
 
     int end_ele = arr[end];
@@ -27,21 +31,21 @@ void posineg(int *arr, int n)
 
     for (int i = 0; i < n - 1; i++)
     {
-            // check if negative num is on odd index
-            // or 
-            // positive num is on even index
+        // check if negative num is on odd index
+        // or
+        // positive num is on even index
         if ((arr[i] > 0 && i % 2 == 0) || (arr[i] < 0 && i % 2 != 0))
         {
 
             for (int j = i + 1; j < n; j++)
             {
-                    // check if they have opposite sign
+                // check if they have opposite sign
                 if ((arr[j] ^ arr[i]) < 0)
                 {
 
-                    // rigth shift including arr[i] and arr[j]
+                    // rigth rotate including arr[i] and arr[j]
 
-                    right_shift(arr, i, j);
+                    right_rotate(arr, i, j);
 
                     break;
                 }
@@ -53,12 +57,7 @@ void posineg(int *arr, int n)
 int main()
 {
 
-    int arr[] = {1,
-                 2,
-                 3,
-                 -4,
-                 -1,
-                 4};
+    int arr[] = {-1, -2, -3, 4, 5, 6, 6};
     // int arr[] = {-5, -2, 5, 2, 4, 7, 1, 8, 0, -8};
     int n = sizeof(arr) / sizeof(arr[0]);
     posineg(arr, n);
