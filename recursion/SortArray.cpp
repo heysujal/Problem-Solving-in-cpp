@@ -41,6 +41,7 @@ void sort_array(vector <int> &v)
 int main()
 {
     vector<int> v = {1, 2, 4, 6, 5, 0};
+    print_array(v);
     sort_array(v);
     print_array(v);
     return 0;
