@@ -3,14 +3,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void print_array(int arr[], int n)
-{
-    for (int i = 0; i < n; i++)
-    {
-        cout << arr[i] << ' ';
-    }
-    cout << endl;
-}
 int is_set_bit(int ele, int index)
 {
 
@@ -35,16 +27,15 @@ void find_two(int *arr, int n)
 
         if (is_set_bit(arr[j], 0))
         {
+
             temp ^= arr[j];
         }
     }
 
-
-// first non repeating number
+    // first non repeating number
     cout << temp << endl;
-// second non repeating number
-    cout << (temp^res);
-
+    // second non repeating number
+    cout << (temp ^ res);
 }
 int main()
 {

@@ -51,7 +51,7 @@ int main()
 
     int arr[] = {1, -2, 1, 0, 5};
 
-     int k;
+    int k;
 
     cout << "Enter k ";
     cin >> k;
