@@ -2,14 +2,12 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int ceilingAS(int arr[], int n, int target)
+int bs(int arr[], int n, int target)
 {
 
-    if (target > arr[n - 1])
-        return -1;
     int low = 0;
     int high = n - 1;
-    bool isAsc = arr[0] < arr[n - 1];
+
     while (low <= high)
     {
         int mid = low + (high - low) / 2;
@@ -24,11 +22,12 @@ int ceilingAS(int arr[], int n, int target)
         }
         else
         {
+
             low = mid + 1;
         }
     }
 
-    return low;
+    return -1;
 }
 
 int main()
@@ -40,7 +39,7 @@ int main()
 
     int n = sizeof(arr) / sizeof(arr[0]);
 
-    cout << ceilingAS(arr, n, target);
+    cout << bs(arr, n, target);
 
     return 0;
 }
