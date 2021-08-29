@@ -1,12 +1,11 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-int bs(int arr[], int n, int target)
+int bs(vector<int> &arr, int target)
 {
 
     int low = 0;
-    int high = n - 1;
+    int high = arr.size() - 1;
 
     while (low <= high)
     {
@@ -33,13 +32,13 @@ int bs(int arr[], int n, int target)
 int main()
 {
 
-    int arr[] = {1, 2, 3, 5, 8};
+    vector<int> arr = {1, 2, 3, 5, 8};
 
     int target = 0;
 
     int n = sizeof(arr) / sizeof(arr[0]);
 
-    cout << bs(arr, n, target);
+    cout << bs(arr, target);
 
     return 0;
 }
