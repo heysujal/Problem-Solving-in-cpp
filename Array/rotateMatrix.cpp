@@ -25,7 +25,7 @@ void rotateMat(vector<vector<int>> &arr)
         for (int i = arr.size() - 1; i >= 0; i--)
         {
 
-            if (b == arr.size())
+            if (b == arr[0].size())
             {
                 b = 0;
                 a++;
