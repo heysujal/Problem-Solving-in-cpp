@@ -9,22 +9,21 @@ int maxSubArraySum(int arr[], int n)
     int current_sum = 0;
     int overall_sum = INT_MIN;
 
-    for (int i = 0; i < n;i++){
-//  add current array element 
-        current_sum+=arr[i];
+    for (int i = 0; i < n; i++)
+    {
+        //  add current array element
+        current_sum += arr[i];
 
-        if(current_sum > overall_sum){
+        if (current_sum > overall_sum)
+        {
             overall_sum = current_sum;
         }
 
-
-// if current_sum is negative then reset it
-        if(current_sum < 0 ){
+        // if current_sum is negative then reset it
+        if (current_sum < 0)
+        {
             current_sum = 0;
         }
-
-
-
     }
 
     return overall_sum;
