@@ -32,7 +32,7 @@ void Bubble_sort(int *arr, int n)
         
         }
 
-        if (swapped = false){
+        if (swapped == false){
             break;
 
         }
