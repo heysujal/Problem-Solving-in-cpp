@@ -6,6 +6,7 @@ void print_recursive(int n)
 
     if(n==0)
         return;
+         
     print_recursive(n - 1);
     cout << n << " ";
 
