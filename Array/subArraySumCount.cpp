@@ -9,7 +9,7 @@ int main()
     cin >> n;
 
     int arr[n];
-    int givenSum = 12;
+    int givenSum = 3;
 
     int count = 0;
 
