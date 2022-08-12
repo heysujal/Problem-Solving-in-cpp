@@ -11,31 +11,39 @@ struct Node
         next = NULL;
     }
 };
-// print without recursion
-//  void traverseList(Node *head){
-//      Node *curr = head;
-//      while(curr!=NULL){
-//          cout<<curr->data;
-//          cout<<" "
-//          ;
-//          curr = curr->next;
-
-//     }
-// }
-
+ 
 // print with recursion
 
-void printList(Node *head)
+// void printList(Node* head)
+// {
+
+//     if(head==NULL)
+//         return;
+//     cout<<head->data<< " ";
+//     printList(head->next);
+
+
+
+// }
+
+void printList(Node* head)
 {
-
-    if (head == NULL)
-    {
+    if(head==NULL)
         return;
-    }
+    while (head!=NULL)
+    {   
+        cout<<"address of head "<<head<<" ";
+        cout<<head->data<<endl;
+        head=head->next;
 
-    cout << head->data << " ";
-    printList (head->next);
+    }
+    cout<<endl;
+
+    cout<<head;
+
+
 }
+
 
 int main()
 {
@@ -45,7 +53,9 @@ int main()
     head->next->next->next = new Node(40);
 
     // traverseList(head);
+    cout<<head<<endl;
 
     printList(head);
+    cout<<endl<<head<<endl;
     return 0;
 }
