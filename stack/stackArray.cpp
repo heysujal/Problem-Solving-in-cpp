@@ -66,10 +66,11 @@ int main(){
     st.push(25);
     st.push(51);
     st.push(512);
+    cout<<st.size<<endl;
      
     cout<<st.peek();
     cout<<endl<<st.isEmpty();
-    
     return 0;
 
 }
+
