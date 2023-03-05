@@ -9,7 +9,7 @@ struct Node{
     {
         data = x;
         next = NULL;
-
+ 
     }
 };
  void printList(Node *head)
