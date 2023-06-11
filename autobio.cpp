@@ -1,31 +1,27 @@
 #include <bits/stdc++.h>
 using namespace std;
 // my exmple
-bool f(int num)
-{
-    string str = to_string(num);
-    cout << "hello";
+bool f(int num) {
+  string str = to_string(num);
+  cout << "hello";
 
-    unordered_map<int, int> m;
-    for (int i = 0; i < str.length(); i++)
-    {
-        m[str[i] - '0']++;
-    }
+  unordered_map<int, int> m;
+  for (int i = 0; i < str.length(); i++) {
+    m[str[i] - '0']++;
+  }
 
-    for (int i = 0; i < str.length(); i++)
-    {
-        auto it = m.find(i);
-        if (it != m.end() and it->second != str[i] - '0')
-            return false;
-    }
+  for (int i = 0; i < str.length(); i++) {
+    auto it = m.find(i);
+    if (it != m.end() and it->second != str[i] - '0')
+      return false;
+  }
 
-    return true;
+  return true;
 }
 
-int main()
-{
-    int number = 123;
+int main() {
+  int number = 123;
 
-    cout << f(number);
-    return 0;
+  cout << f(number);
+  return 0;
 }
