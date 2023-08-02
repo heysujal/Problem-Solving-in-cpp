@@ -53,8 +53,8 @@ int main()
     pq.push_back({1, 0});
     if(S.canFinish(N, pq))
         cout<< "yes";
-    else 
-        cout<< "No"; 
+    else
+        cout<< "No";
 
-   return 0;
+    return 0;
 }

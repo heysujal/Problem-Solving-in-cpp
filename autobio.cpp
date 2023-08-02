@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-// my exmple 
+// my exmple
 bool f(int num)
 {
     string str = to_string(num);
