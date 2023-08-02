@@ -14,16 +14,10 @@ int maxSubArraySum(int arr[], int n)
         //  add current array element
         current_sum += arr[i];
 
-        if (current_sum > overall_sum)
-        {
-            overall_sum = current_sum;
-        }
+        overall_sum = max(overall_sum, current_sum);
 
         // if current_sum is negative then reset it
-        if (current_sum < 0)
-        {
-            current_sum = 0;
-        }
+        current_sum = current_sum < 0 ? 0 : current_sum;
     }
 
     return overall_sum;
