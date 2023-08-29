@@ -42,6 +42,11 @@ public:
             cout<<"Q is Empty\n";
         return -1;
     }
+    int end(){
+        if(size > 0)
+            return arr[back-1];
+        return -1;
+    }
 };
 
 
@@ -56,5 +61,6 @@ q.pop();
 q.pop();
 cout<<q.getSize()<<"\n";
 cout<<q.top()<<endl;
+cout<<q.end()<<endl;
 return 0;
 }

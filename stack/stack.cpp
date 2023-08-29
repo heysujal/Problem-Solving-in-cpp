@@ -76,36 +76,18 @@ public:
     }
 };
 
- 
-
-
 int main()
 {
-     
+
     Stack st(50);
-    // st.push(51);
-    // st.push(15);
-    // st.push(521);
-    // st.push(25);
-    // st.push(51);
-    // st.push(512);
-    // cout << st.getSize() << endl;
-    // st.pop();
-    // cout << st.getSize() << endl;
-    // cout << st.peek() << endl;
-    // cout << st.isEmpty() << endl;
-    // cout << st.isFull() << endl;
-    // st.pop();
-    // st.pop();
-    // st.pop();
-    // st.pop();
-    // st.pop();
-    // st.pop();
-    for(int i  =0; i < 50; i++){
+    cout<<"Hi";
+    
+    for (int i = 0; i < 50; i++)
+    {
         st.push(i);
     }
     cout << st.isEmpty() << endl;
     cout << st.isFull() << endl;
-  
+
     return 0;
 }
